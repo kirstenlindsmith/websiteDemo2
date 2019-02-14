@@ -1,6 +1,6 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
-import { AllCampuses, AllStudents } from './index';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import { AllCampuses, AllStudents, SingleCampus, SingleStudent } from './index';
 
 const Root = () => {
   return (
@@ -12,10 +12,7 @@ const Root = () => {
             <p>Academy of Javascript</p>
           </div>
           <div>
-            <img 
-              id="logo"
-              src="https://i.redd.it/51g20oqa4si01.png"
-            />
+            <img id="logo" src="https://i.redd.it/51g20oqa4si01.png" />
           </div>
           <ul id="navList">
             <li>
@@ -31,8 +28,10 @@ const Root = () => {
         </nav>
         <main>
           <Switch>
-            <Route path='/campuses' component={AllCampuses} />
-            <Route path='/students' component={AllStudents} />
+            <Route exact path="/campuses" component={AllCampuses} />
+            <Route exact path="/students" component={AllStudents} />
+            <Route path="/campuses/:campusId" component={SingleCampus} />
+            <Route path="/students/:studentId" component={SingleStudent} />
           </Switch>
         </main>
       </div>

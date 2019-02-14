@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom'
 import { getStudentsFromServer } from '../actionCreators';
 
 class AllStudents extends Component {
@@ -9,7 +10,6 @@ class AllStudents extends Component {
 
   render() {
     const students = this.props.allStudents || [];
-
     return (
       <div className="center">
         <ul className="profileList">
@@ -18,7 +18,7 @@ class AllStudents extends Component {
               <div key={student.id}>
                 <div className="profileElem">
                   {student.firstName}{' '}{student.lastName}
-                  <img src={student.imageUrl} className="profileImage" />
+                  <Link to={`/students/${student.id}`}><img src={student.imageUrl} className="profileImage" /></Link>
                 </div>
               </div>
             );
@@ -32,6 +32,7 @@ class AllStudents extends Component {
 const mapStateToProps = state => {
   return {
     allStudents: state.students,
+    state: state
   };
 };
 

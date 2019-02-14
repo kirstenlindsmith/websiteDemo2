@@ -14,6 +14,21 @@ router.get('/', async (req, res, next) => {
   }
 });
 
+//GET api/students/#
+router.get('/:studentId', async (req, res, next) => {
+  try {
+    const student = await Student.findOne({
+      where: {
+        id: req.params.studentId,
+      },
+    });
+    res.json(student);
+  } catch (error) {
+    console.error(error);
+    next(error);
+  }
+});
+
 router.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).send('Whoops! Something went wrong!');

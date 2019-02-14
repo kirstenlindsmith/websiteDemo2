@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { getCampusesFromServer } from '../actionCreators';
 
 class AllCampuses extends Component {
@@ -17,8 +18,8 @@ class AllCampuses extends Component {
             return (
               <div key={campus.id}>
                 <div className="profileElem">
-                  {campus.name}
-                  <img src={campus.imageUrl} className="profileImage" />
+                  <div id="campusName">{campus.name}</div>
+                  <Link to={`/campuses/${campus.id}`}> <img src={campus.imageUrl} className="profileImage" /> </Link>
                 </div>
               </div>
             );

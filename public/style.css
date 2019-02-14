@@ -13,6 +13,17 @@
   color: white  
 }
 
+.center {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hidden {
+  display: none;
+}
+
 body {
   background: linear-gradient(#ffffff, #c0c0c0);
   height: 100vh;
@@ -40,13 +51,6 @@ main {
 }
 
 p {
-  display: inline-flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.center {
   display: inline-flex;
   align-items: center;
   flex-direction: column;
@@ -112,6 +116,12 @@ nav p {
   border-radius: 15px;
 }
 
+.singleImage {
+  height: 250px;
+  margin-top: 15px;
+  margin-bottom: 25px
+}
+
 .profileElem {
   padding: 10px;
   display: inline-flex;
@@ -125,4 +135,60 @@ nav p {
   display: inline-flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+.profileSingle {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profileSingle h4{
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 10px;
+}
+
+.description {
+  margin-left: 20vw;
+  margin-right: 20vw;
+  text-align: center
+}
+
+.smallText {
+  font-style: italic;
+  font-size: 10pt;
+  margin: 1px
+}
+
+.pageTitle {
+  margin: 5px;
+  margin-top: 20px;
+}
+
+#enrolledStudents {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 0px
+}
+
+#enrolledStudents h4{
+  margin-bottom: 0px;
+  padding-bottom: 0px
+}
+
+#enrolledStudents.hidden{
+  display: none
+}
+
+.enrollLink {
+  font-weight: bold
+}
+
+#studentCampusLink {
+  margin-left: 5px
 }
