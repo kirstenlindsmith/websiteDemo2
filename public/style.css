@@ -5,7 +5,12 @@
 
 * {
   box-sizing: border-box;
-  font-family: arial, sans-serif;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif
+}
+
+*::selection {
+  background: rgb(134, 50, 212);
+  color: white  
 }
 
 body {
@@ -14,12 +19,14 @@ body {
   padding: 0;
   margin: 0;
   width: 100vw;
+  background-repeat: no-repeat;
+  background-attachment: fixed
 }
 
 nav {
   align-items: center;
-  background-color: #333333;
-  color: #c0c0c0;
+  background-color: #d7b0e7;
+  color: #000000;
   display: flex;
   height: 80px;
   padding: 10px;
@@ -30,4 +37,92 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+p {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.center {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  height: 60px;
+}
+
+nav h1{
+  font-family: American Typewriter, serif;
+  font-size: 21px;
+  letter-spacing: 4px;
+  font-weight: lighter;
+  margin: 0px;
+  padding: 0px;
+  margin-top: 10px;
+}
+
+nav p {
+  font-size: 12px;
+  letter-spacing: 0.7px;
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 10px;
+}
+
+#logo {
+  height: 50px;
+  position: absolute;
+  left: 153px;
+  top: 5px
+}
+
+#navDiv {
+  flex-direction: column
+}
+
+#navList {
+  position: absolute;
+  left: 155px;
+  top: 10px;
+}
+
+#navList li {
+  display: inline-flex;
+  flex-direction: row;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 0px;
+  justify-content: space-between;
+}
+
+#navList a {
+  color: #803eca
+}
+
+.profileImage {
+  height: 150px;
+  border-radius: 15px;
+}
+
+.profileElem {
+  padding: 10px;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profileList {
+  font-size: 10pt;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
